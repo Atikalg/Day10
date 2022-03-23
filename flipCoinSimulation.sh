@@ -19,3 +19,7 @@ fi
 headsMargin=$(($headsWins-$tailsWins))
 tailsMargin=$(($tailsWins-$headsWins))
 }
+{
+echo "heads win count :- "$headsWins;
+echo "tails wins counts :- "$tailsWins;
+}
