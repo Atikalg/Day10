@@ -42,3 +42,9 @@ then
 	displayWinningResult
 fi
 }
+while [ $counter -lt 22 ]
+while [ $headsWins -lt 21 ] && [ $tailsWins -lt 21 ]
+do
+	flipCoinSimulation
+done
+displayWinningResult
