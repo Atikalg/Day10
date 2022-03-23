@@ -23,3 +23,22 @@ tailsMargin=$(($tailsWins-$headsWins))
 echo "heads win count :- "$headsWins;
 echo "tails wins counts :- "$tailsWins;
 }
+function displayWinningResult()
+{
+headsTailsCount
+if [ $headsWins -gt $tailsWins ]
+then
+	echo "Heads wins by margin of " $headsMargin
+elif [ $tailsWins -gt $headsWins ]
+then
+	echo "Tails wins by margin of " $tailsMargin
+elif [ $tailsWins -eq $headsWins ]
+then
+	echo "its a Tie !"
+	while [ $tailsMargin -lt 2 ] && [ $headsMargin -lt 2 ]
+	do
+		flipCoinSimulation
+	done
+	displayWinningResult
+fi
+}
